@@ -10,10 +10,42 @@ const connect = function (){
   conn.on("connect", (data)=> {
     //code that does something once the connection is established
     console.log("Be happy. Now move your snake.")
-    // process.stdin.on('data', (data) => {
-    //   client.write(data)
-    // })
-    conn.write('Name: 123')
+    conn.write('Name: ROL')
+    
+    // for (let i = 0; i< 10; i++){
+    //   setTimeout(()=>{
+    //     conn.write('Move: up')
+    //   },1000*i)
+
+    // }
+
+    //times must be different or the server will get confused and pick the last one
+    // setTimeout(()=>{
+    //   conn.write('Move: left')
+    // },200)
+    // setTimeout(()=>{
+    //   conn.write('Move: left')
+    // },300)
+    // setTimeout(()=>{
+    //   conn.write('Move: left')
+    // },400)
+    // setTimeout(()=>{
+    //   conn.write('Move: left')
+    // },500)
+    // setTimeout(()=>{
+    //   conn.write('Move: left')
+    // },600)
+    // setTimeout(()=>{
+    //   conn.write('Move: left')
+    // },700)
+  
+  })
+  conn.on("connect", (data)=> {
+    //code that does something once the connection is established
+    setTimeout(()=>{
+      conn.write('Move: left')
+    },200)
+  
   })
   conn.setEncoding("utf8")
   return conn
