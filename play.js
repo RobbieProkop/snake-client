@@ -1,18 +1,18 @@
-const net = require('net')
+const net = require('net');
+const connect = require("./client")
 
-const connect = function (){
-  const conn = net.createConnection({
-    host: //IP address here 
-    port: //Port number here
-  })
-  conn.setEncoding("utf8")
-  
-  conn.on("connect", (data)=> {
-    //code that does something once the connection is established
-    console.log("Be happy. Now move your snake.")
-  })
-  return conn
-}
+// establishes a connection with the game server
+// const connect = function () {
+//   const conn = net.createConnection({
+//     host: "165.227.47.243",
+//     port: 50541 // PORT number here,
+//   });
 
-console.log("connecting.....")
-connect()
+//   // interpret incoming data as text
+//   conn.setEncoding("utf8");
+
+//   return conn;
+// };
+
+console.log("Connecting ...");
+connect();
