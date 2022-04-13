@@ -5,14 +5,19 @@ const connect = function (){
     host: "165.227.47.243",
     port: 50541//Port number here
   })
-  
+
   
   conn.on("connect", (data)=> {
     //code that does something once the connection is established
     console.log("Be happy. Now move your snake.")
+    // process.stdin.on('data', (data) => {
+    //   client.write(data)
+    // })
+    conn.write('Name: 123')
   })
   conn.setEncoding("utf8")
   return conn
 }
+
 
 module.exports = connect
