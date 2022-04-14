@@ -1,3 +1,5 @@
+const connect = require("./client")
+const conn = connect()
 const handleUserInput = function(key){
   console.log(key)
   if( key === '\u0003'){
