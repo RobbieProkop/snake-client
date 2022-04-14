@@ -17,6 +17,15 @@ const handleUserInput = function(key){
   if( key === 'd'){
     conn.write('Move: right')
   }
+  if( key === 'o'){
+    conn.write('Say: ok')
+  }
+  if( key === 'n'){
+    conn.write('Say: no')
+  }
+  if( key === 'y'){
+    conn.write('Say: yes')
+  }
 
 }
 const setupInput = function (conn) {
